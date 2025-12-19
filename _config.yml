@@ -218,6 +218,10 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
+  - "vendor"
+  - ".bundle"
+  - "Gemfile"
+  - "Gemfile.lock"
 
 jekyll-archives:
   enabled: [categories, tags]

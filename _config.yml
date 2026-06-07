@@ -18,9 +18,9 @@ timezone: America/Los Angeles
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: NullVoid.Labs # the main title
+title: NullVoidLabs # the main title
 
-tagline: Self-taught cybersecurity enthusiast aspiring to join the red team ranks. # it will display as the subtitle
+tagline: Offensive security research and field notes from NullVoidLabs # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Delve into practical cybersecurity knowledge, including networkworking, ethical hacking, pentesting, and vulnerability analysis. Here, you’ll find my project writeups, guided labs, and tools designed for areas like Active Director, privilege escalation, and network security. Explore resources to enhance your expertise in offensive techniques.

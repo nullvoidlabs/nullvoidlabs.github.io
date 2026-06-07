@@ -1,7 +1,7 @@
 ---
 title: "TryHackMe: Silver Platter"
-author: lrjsec
-categories: [TryHackMe]
+author: Luis Rojas
+categories: [CTF Write-ups]
 tags: [web, brute-force, caido, idor, ssh, ]
 render_with_liquid: false
 media_subpath: /images/thm_silver_platter/

@@ -4,12 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
----
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
----
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">

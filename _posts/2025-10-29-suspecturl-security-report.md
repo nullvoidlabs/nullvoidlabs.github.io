@@ -1,7 +1,7 @@
 ---
 title: "Suspecturl Review: Security/Privacy Report"
 date: 2025-10-29
-author: lrjsec
+author: Luis Rojas
 categories: [Security Assessment]
 tags: [webrtc, privacy, security-assessment, ip-exposure, cors, penetration-testing]
 ---

@@ -42,7 +42,7 @@ Additionally, after a recent domain change over from .com to .digital, room crea
 - ICE signaling payload shows srflx/host candidates and IPv6 candidates.
 
 ![Figure 1:](/assets/img/ice-candidates.png)
-![Figure 1:](/assets/img/leak1.png)
+![Figure 1:](/assets/img/leak.png)
 
 **Impact**
 

@@ -189,7 +189,7 @@ order: 4
   <hr class="nvl-divider">
 
   <p class="nvl-section-label">// whoami</p>
-  <p class="nvl-bio">I'm an aspiring penetration tester building toward ICS/OT red team operations. I came up through two years of self-directed study — homelab, CTFs, and real-world research — while working full-time in hospitality. I hold the eJPT and Security+, and I'm targeting OSCP in August 2026.</p>
+  <p class="nvl-bio">I'm an aspiring penetration tester building toward ICS/OT red team operations. I came up through two years of self directed study — homelab, CTFs, and real world research, all while working full time in hospitality. I hold the eJPT and Security+, and I'm targeting OSCP in August 2026.</p>
   <p class="nvl-bio">NullVoidLabs is my research identity: where I document malware analyses, publish CTF writeups, and refine the craft of offensive security one box at a time.</p>
 
   <hr class="nvl-divider">

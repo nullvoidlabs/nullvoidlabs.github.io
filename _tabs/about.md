@@ -183,14 +183,14 @@ order: 4
 <div class="nvl-about">
 
   <p class="nvl-prompt-line">nullvoidlabs.io/about</p>
-  <h1 class="nvl-headline">Luis &middot; nullvoid</h1>
-  <p class="nvl-sub">Offensive security practitioner.</p>
+  <h1 class="nvl-headline">Luis &middot; Nullvoid</h1>
+  <p class="nvl-sub">Junior penetration tester.</p>
 
   <hr class="nvl-divider">
 
   <p class="nvl-section-label">// whoami</p>
-  <p class="nvl-bio">I'm a junior penetration tester with over two years of self directed study, all while working full time in hospitality. I hold the eJPT and Security+, and I'm targeting CWES in December 2026.</p>
-  <p class="nvl-bio">NullVoidLabs is my research identity.</p>
+  <p class="nvl-bio">I'm a junior / associate penetration tester. That is the role I want this quarter. By day I intern in cybersecurity (GRC assessments, pentests of self-hosted tools, AWS). The rest of the work is labs I document under NullVoidLabs.</p>
+  <p class="nvl-bio">I also run a VLAN-segmented Proxmox homelab & I currently hold the Security+ and eJPT certifications. RHCSA is November 2026, CWES is December 2026. ICS/OT red team is a long-term target.</p>
 
   <hr class="nvl-divider">
 
@@ -205,7 +205,7 @@ order: 4
       <div class="nvl-stat-val">91st &middot; perfect score</div>
     </div>
     <div class="nvl-stat">
-      <div class="nvl-stat-label">Focus area</div>
+      <div class="nvl-stat-label">Long-Term</div>
       <div class="nvl-stat-val">ICS/OT red team</div>
     </div>
     <div class="nvl-stat">
@@ -223,11 +223,10 @@ order: 4
     <span class="nvl-tag">Burp Suite</span>
     <span class="nvl-tag">Wireshark</span>
     <span class="nvl-tag">Nmap / Rustscan</span>
-    <span class="nvl-tag">Ghidra</span>
     <span class="nvl-tag">Hashcat</span>
     <span class="nvl-tag">Python</span>
     <span class="nvl-tag">Bash</span>
-    <span class="nvl-tag">Proxmox / Ludus</span>
+    <span class="nvl-tag">Proxmox</span>
     <span class="nvl-tag">Active Directory</span>
   </div>
 

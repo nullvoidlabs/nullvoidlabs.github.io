@@ -276,11 +276,11 @@ order: 4
     <a class="nvl-link-btn" href="https://linkedin.com/in/lrjsec" target="_blank">
       <i class="ti ti-brand-linkedin" aria-hidden="true"></i> linkedin
     </a>
+    <a class="nvl-link-btn" href="https://x.com/nullvoidlabs">
+      <i class="ti ti-terminal-2" aria-hidden="true"></i> X
+    </a>
     <a class="nvl-link-btn" href="mailto:luisrjs@nullvoidlabs.io">
       <i class="ti ti-mail" aria-hidden="true"></i> email
-    </a>
-    <a class="nvl-link-btn" href="https://nullvoidlabs.io">
-      <i class="ti ti-terminal-2" aria-hidden="true"></i> labs
     </a>
   </div>
 

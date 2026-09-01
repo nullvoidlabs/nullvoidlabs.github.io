@@ -184,13 +184,13 @@ order: 4
 
   <p class="nvl-prompt-line">nullvoidlabs.io/about</p>
   <h1 class="nvl-headline">Luis &middot; nullvoid</h1>
-  <p class="nvl-sub">Offensive security researcher. Red team practitioner. Hospitality by day, shellcode by night.</p>
+  <p class="nvl-sub">Offensive security practitioner.</p>
 
   <hr class="nvl-divider">
 
   <p class="nvl-section-label">// whoami</p>
-  <p class="nvl-bio">I'm an aspiring penetration tester building toward ICS/OT red team operations. I came up through two years of self directed study — homelab, CTFs, and real world research, all while working full time in hospitality. I hold the eJPT and Security+, and I'm targeting OSCP in August 2026.</p>
-  <p class="nvl-bio">NullVoidLabs is my research identity: where I document malware analyses, publish CTF writeups, and refine the craft of offensive security one box at a time.</p>
+  <p class="nvl-bio">I'm a junior penetration tester with over two years of self directed study, all while working full time in hospitality. I hold the eJPT and Security+, and I'm targeting CWES in December 2026.</p>
+  <p class="nvl-bio">NullVoidLabs is my research identity.</p>
 
   <hr class="nvl-divider">
 
@@ -243,14 +243,20 @@ order: 4
     </div>
     <div class="nvl-path-item">
       <span class="nvl-path-status status-active">active</span>
-      <div class="nvl-path-text">OSCP
-        <small>HTB labs, Black Hat Bash/Python, exam target Aug 2026</small>
+      <div class="nvl-path-text">RHCSA
+        <small>Exam target Nov 2026</small>
+      </div>
+    </div>
+    <div class="nvl-path-item">
+      <span class="nvl-path-status status-active">active</span>
+      <div class="nvl-path-text">CWES
+        <small>Exam target Dec 2026</small>
       </div>
     </div>
     <div class="nvl-path-item">
       <span class="nvl-path-status status-next">next</span>
-      <div class="nvl-path-text">CRTP &middot; C2 operations &middot; AD attack chains
-        <small>Post-OSCP offensive depth</small>
+      <div class="nvl-path-text">OSCP &middot; AD attack chains
+        <small>HR Visibility</small>
       </div>
     </div>
     <div class="nvl-path-item">

@@ -9,7 +9,7 @@ layout: page
   <li class="cat">
     <span class="bubble bubble--lg" aria-hidden="true"><span class="bubble-code">{{ first.tag_code }}</span><span class="bubble-no">{{ cat[1].size }}</span></span>
     <div>
-      <h2><a href="{{ '/categories/' | append: cat[0] | slugify | append: '/' | relative_url }}">{{ cat[0] }}</a></h2>
+      <h2><a href="{{ cat[0] | slugify | prepend: '/categories/' | append: '/' | relative_url }}">{{ cat[0] }}</a></h2>
       {% if info.blurb %}<p>{{ info.blurb }}</p>{% endif %}
     </div>
     <ol class="entries">

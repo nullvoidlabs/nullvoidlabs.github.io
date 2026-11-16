@@ -7,7 +7,7 @@ layout: default
     <div class="wrap">
       {% include bubble.html post=page size="lg" %}
       <div>
-        {% if category %}<p class="post-kicker"><a href="{{ '/categories/' | append: category | slugify | append: '/' | relative_url }}">{{ category }}</a></p>{% endif %}
+        {% if category %}<p class="post-kicker"><a href="{{ category | slugify | prepend: '/categories/' | append: '/' | relative_url }}">{{ category }}</a></p>{% endif %}
         <h1 class="post-title">{{ page.title }}</h1>
         <ul class="meta">
           <li>Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></li>
@@ -25,7 +25,7 @@ layout: default
         {% if tags.size > 0 %}
         <ul class="tags" aria-label="Tags">
           {%- for tag in tags %}
-          <li><a href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}">{{ tag }}</a></li>
+          <li><a href="{{ tag | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag }}</a></li>
           {%- endfor %}
         </ul>
         {% endif %}

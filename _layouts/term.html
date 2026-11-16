@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<header class="page-head">
+  <div class="wrap">
+    <p class="post-kicker"><a href="{% if page.kind == 'tag' %}{{ '/tags/' | relative_url }}{% else %}{{ '/categories/' | relative_url }}{% endif %}">{% if page.kind == 'tag' %}Tag{% else %}Category{% endif %}</a></p>
+    <h1 class="page-title">{{ page.term }}</h1>
+    {%- assign info = site.data.categories[page.term] -%}
+    <p class="page-lede">{% if page.kind == 'category' and info.blurb %}{{ info.blurb }} {% endif %}{{ page.term_posts.size }} write-up{% if page.term_posts.size != 1 %}s{% endif %}.</p>
+  </div>
+</header>
+<div class="page-body">
+  <div class="wrap">
+    <ol class="entries">
+      {%- for post in page.term_posts %}
+      {% include entry.html post=post %}
+      {%- endfor %}
+    </ol>
+  </div>
+</div>

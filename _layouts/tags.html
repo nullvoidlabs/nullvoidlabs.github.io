@@ -1,0 +1,11 @@
+---
+layout: page
+---
+{%- assign tags = site.tags | sort -%}
+<ul class="term-cloud">
+  {%- for tag in tags %}
+  {%- if tag[0] and tag[0] != "" %}
+  <li><a href="{{ tag[0] | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+  {%- endif %}
+  {%- endfor %}
+</ul>

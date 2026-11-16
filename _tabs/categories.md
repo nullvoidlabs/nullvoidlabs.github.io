@@ -1,5 +1,6 @@
 ---
 layout: categories
-icon: fas fa-stream
-order: 1
+title: Categories
+lede: Write-ups grouped by the kind of work.
+order: 2
 ---

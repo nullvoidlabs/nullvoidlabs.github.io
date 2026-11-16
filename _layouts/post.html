@@ -1,0 +1,71 @@
+---
+layout: default
+---
+{%- assign category = page.categories.first -%}
+<article class="post">
+  <header class="post-head">
+    <div class="wrap">
+      {% include bubble.html post=page size="lg" %}
+      <div>
+        {% if category %}<p class="post-kicker"><a href="{{ category | slugify | prepend: '/categories/' | append: '/' | relative_url }}">{{ category }}</a></p>{% endif %}
+        <h1 class="post-title">{{ page.title }}</h1>
+        <ul class="meta">
+          <li>Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></li>
+          {%- if page.last_modified_at %}
+          {%- assign mod = page.last_modified_at | date: '%Y-%m-%d' -%}
+          {%- assign pub = page.date | date: '%Y-%m-%d' -%}
+          {%- if mod != pub %}
+          <li>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%B %-d, %Y' }}</time></li>
+          {%- endif %}
+          {%- endif %}
+          <li>{{ content | nvl_reading_minutes }} min read</li>
+          <li>Log {{ page.tag_code }}-{{ page.log_no }}</li>
+        </ul>
+        {%- assign tags = page.tags | compact -%}
+        {% if tags.size > 0 %}
+        <ul class="tags" aria-label="Tags">
+          {%- for tag in tags %}
+          <li><a href="{{ tag | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag }}</a></li>
+          {%- endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+    {%- assign cover = page.image.path | default: page.image -%}
+    {%- if cover and cover != "" %}
+    <div class="wrap"><figure class="post-cover"><img src="{{ cover | relative_url }}" alt="{{ page.image.alt | default: page.title }}" decoding="async"></figure></div>
+    {%- endif %}
+  </header>
+
+  <div class="wrap">
+    <div class="post-grid">
+      {% if page.toc != false %}
+      <nav class="toc" aria-labelledby="toc-title" hidden>
+        <details open><summary id="toc-title">Contents</summary><ol></ol></details>
+      </nav>
+      {% endif %}
+      <div class="prose">
+        {{ content }}
+      </div>
+    </div>
+
+    <footer class="post-foot">
+      <div class="share">
+        <span>Share</span>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/intent/post?text={{ page.title | uri_escape }}&amp;url={{ page.url | absolute_url | uri_escape }}" rel="noopener">X</a>
+        <button type="button" class="copy-link" data-url="{{ page.url | absolute_url }}" hidden>Copy link</button>
+      </div>
+      {% if page.previous or page.next %}
+      <nav class="pager" aria-label="More write-ups">
+        {%- if page.previous %}
+        <a class="prev" href="{{ page.previous.url | relative_url }}">{% include bubble.html post=page.previous %}<span><small>Older</small><strong>{{ page.previous.title }}</strong></span></a>
+        {%- endif %}
+        {%- if page.next %}
+        <a class="next" href="{{ page.next.url | relative_url }}">{% include bubble.html post=page.next %}<span><small>Newer</small><strong>{{ page.next.title }}</strong></span></a>
+        {%- endif %}
+      </nav>
+      {% endif %}
+    </footer>
+  </div>
+</article>

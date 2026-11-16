@@ -1,5 +1,6 @@
 ---
 layout: archives
-icon: fas fa-archive
-order: 3
+title: Archive
+lede: Every write-up, newest first.
+order: 1
 ---

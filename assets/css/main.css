@@ -74,6 +74,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 5rem; }
 body {
+  min-height: 100vh; display: flex; flex-direction: column;
   margin: 0;
   background: var(--bg);
   color: var(--ink);
@@ -88,6 +89,7 @@ a:hover { background: var(--alarm-soft); }
 :focus-visible { outline: 3px solid var(--alarm); outline-offset: 2px; }
 ::selection { background: var(--alarm); color: #1b1f22; }
 
+main { flex: 1 0 auto; }
 .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
 .skip { position: absolute; left: -999px; top: .5rem; background: var(--alarm); color: #1b1f22; padding: .5rem 1rem; z-index: 10; }
 .skip:focus { left: .5rem; }
@@ -182,12 +184,16 @@ a:hover { background: var(--alarm-soft); }
 .chip[aria-pressed="true"] span { color: #1b1f22; }
 
 .log-list { list-style: none; margin: 0; padding: 0; position: relative; }
-/* the process line */
-.log-list::before {
-  content: ""; position: absolute; top: 1.9rem; bottom: 1.9rem; left: calc(3.75rem / 2 - 1px);
+/* the process line: one segment from each tag down to the next */
+.log-row::before {
+  display: none;
+  content: ""; position: absolute; left: calc(var(--b) / 2 - 1px);
+  top: calc(1.4rem + var(--b) / 2); bottom: calc(-1.4rem - var(--b) / 2);
   border-left: 2px solid var(--ink); transform-origin: top;
 }
-.log-row { position: relative; display: grid; grid-template-columns: 3.75rem minmax(0, 1fr); gap: 1.5rem; padding-block: 1.25rem; }
+.log-row:has(~ .log-row:not([hidden]))::before { display: block; }
+.log-row .bubble { z-index: 1; }
+.log-row { --b: 3.75rem; position: relative; display: grid; grid-template-columns: 3.75rem minmax(0, 1fr); gap: 1.5rem; padding-block: 1.25rem; }
 .log-row[hidden] { display: none; }
 .log-row .bubble { margin-top: .15rem; }
 .log-body { max-width: 52rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--rule); }
@@ -203,12 +209,12 @@ a:hover { background: var(--alarm-soft); }
 @media (max-width: 560px) {
   .log-row { grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; }
   .log-row .bubble { --size: 3rem; }
-  .log-list::before { left: calc(3rem / 2 - 1px); }
+  .log-row { --b: 3rem; }
 }
 
 /* One orchestrated moment: the line draws, tags come on in sequence */
 @media (prefers-reduced-motion: no-preference) {
-  .js .log-list::before { animation: draw 900ms cubic-bezier(.3, .7, .2, 1) both; }
+  .js .log-row::before { animation: draw 300ms linear both; animation-delay: calc(200ms + var(--i, 0) * 110ms); }
   .js .log-row .bubble { animation: lamp 360ms ease-out both; animation-delay: calc(120ms + var(--i, 0) * 110ms); }
   @keyframes draw { from { transform: scaleY(0); } to { transform: scaleY(1); } }
   @keyframes lamp { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: none; } }
@@ -236,7 +242,7 @@ a:hover { background: var(--alarm-soft); }
 }
 
 .post-cover { margin: 2rem 0 0; }
-.post-cover img { display: block; width: 100%; max-height: 420px; object-fit: cover; border: 1px solid var(--rule); }
+.post-cover img { display: block; width: 100%; max-height: 340px; object-fit: contain; background: var(--panel); border: 1px solid var(--rule); }
 
 .post-grid { display: grid; gap: 2.5rem; padding-block: 2.5rem 3rem; }
 @media (min-width: 1100px) {
@@ -277,6 +283,8 @@ a:hover { background: var(--alarm-soft); }
 .prose li::marker { color: var(--ink-2); }
 .prose strong { font-weight: 600; }
 .prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+/* h2 already carries a rule; drop a manual --- right before it */
+.prose hr:has(+ h1, + h2) { display: none; }
 .prose img { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); background: var(--panel); }
 .prose p > img, .prose p > a > img { margin-inline: auto; }
 .prose img + em, .prose p > img + br + em { display: block; margin-top: .5rem; font-size: .92rem; color: var(--ink-2); }
@@ -385,7 +393,7 @@ a:hover { background: var(--alarm-soft); }
 .roadmap li[data-state="active"]::before { background: var(--alarm); border-color: var(--ink); }
 .roadmap strong { display: block; font: 700 1.3rem/1.2 var(--display); }
 .roadmap span { display: block; color: var(--ink-2); font-size: 1rem; }
-.roadmap em { font-style: normal; font: 600 .95rem/1 var(--display); letter-spacing: .02em; color: var(--ink-2); }
+.roadmap em { display: inline-block; margin-top: .3rem; white-space: nowrap; font-style: normal; font: 600 .95rem/1 var(--display); letter-spacing: .02em; color: var(--ink-2); }
 .roadmap li[data-state="active"] em { color: var(--ink); background: var(--alarm-soft); padding: .1rem .35rem; }
 
 .kit { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0 0 1.5rem; padding: 0; }

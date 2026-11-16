@@ -1,0 +1,15 @@
+<header class="titlebar">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">{% include mark.html %}<span>NullVoidLabs</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Write-ups</a>
+      {%- assign tabs = site.tabs | sort: 'order' -%}
+      {%- for tab in tabs %}
+      <a href="{{ tab.url | relative_url }}"{% if page.url == tab.url %} aria-current="page"{% endif %}>{{ tab.title }}</a>
+      {%- endfor %}
+    </nav>
+    <button class="theme-toggle" type="button" hidden aria-label="Switch colour theme" title="Switch colour theme">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>

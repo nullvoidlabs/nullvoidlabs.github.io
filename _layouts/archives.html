@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{%- assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" -%}
+{%- for year in years %}
+<section class="year" aria-labelledby="y{{ year.name }}">
+  <h2 id="y{{ year.name }}">{{ year.name }}</h2>
+  <ol class="entries">
+    {%- for post in year.items %}
+    {% include entry.html post=post %}
+    {%- endfor %}
+  </ol>
+</section>
+{%- endfor %}

@@ -1,0 +1,24 @@
+# Index and SEO summary for each post, keyed by the post's slug
+# (filename without the date). Lets the front page describe a post
+# without editing the post. Posts without an entry fall back to their
+# first prose paragraph.
+SilverPlatter: >-
+  A custom CeWL wordlist cracks the Silverpeas login, an IDOR in the
+  messaging feature leaks SSH credentials, and readable logs in the adm
+  group hand over the password that leads to root.
+suspecturl-security-report: >-
+  An authorized privacy assessment of an anonymous video-chat platform.
+  The masked video and voice hold up, but WebRTC setup exposes
+  participants' public IPv4 and IPv6 addresses.
+sample-1-malware-analysis: >-
+  An HTTP-based reverse shell that beacons to a hardcoded C2 domain,
+  rewrites Internet Settings zone keys, and pipes cmd.exe through the
+  C2 channel. Shares infrastructure with Lab03-01.
+sample-2-malware-analysis: >-
+  A UPX-packed beacon with tampered headers that defeats automated
+  unpacking. Behavioral analysis ties its traffic and registry changes
+  to the same campaign as Sample 1.
+Eighteen: >-
+  Windows Server 2025 domain controller: an MSSQL foothold and
+  credential reuse lead to a chisel SOCKS pivot, then BadSuccessor (dMSA)
+  abuse yields Administrator's keys and SYSTEM on DC01.

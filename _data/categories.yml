@@ -1,0 +1,11 @@
+# Short codes shown in the instrument-tag badge on each write-up.
+# Key = the category name used in a post's front matter.
+"CTF Write-ups":
+  code: CTF
+  blurb: Box and room walkthroughs, from first scan to root.
+"Malware Analysis":
+  code: MAL
+  blurb: Static and dynamic analysis reports with indicators.
+"Security Assessment":
+  code: SEC
+  blurb: Authorized assessments of real applications.

@@ -1,5 +1,6 @@
 ---
 layout: tags
-icon: fas fa-tags
-order: 2
+title: Tags
+lede: Techniques, tools, and platforms that show up across write-ups.
+order: 3
 ---

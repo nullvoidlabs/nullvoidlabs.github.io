@@ -1,0 +1,14 @@
+# The "Current state" panel on the front page. Edit freely.
+updated: 2026-11
+rows:
+  - label: Studying
+    value: RHCSA
+    note: Exam target Dec 2026 – Jan 2027
+  - label: Building
+    value: A Modbus water-tank testbench on ESP32
+    note: Small ICS lab for practising against real field protocols
+  - label: Interning
+    value: GRC platform evaluation and pentesting
+    note: Self-hosted tools, AWS deployment
+  - label: Next
+    value: CCNA, then OSCP

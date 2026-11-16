@@ -53,6 +53,14 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: TEMP preview dump (remove before merge)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "NVLDUMP_BEGIN"
+          tar czf - --exclude='*.png' --exclude='*.webp' --exclude='*.woff2' --exclude='*.jpg' -C _site . | base64 -w 0
+          echo
+          echo "NVLDUMP_END"
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \

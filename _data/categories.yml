@@ -9,3 +9,6 @@
 "Security Assessment":
   code: SEC
   blurb: Authorized assessments of real applications.
+"ICS Lab":
+  code: ICS
+  blurb: Testbench builds, field protocols, and attacks engineered out.

@@ -1,12 +1,12 @@
 # NullVoidLabs
 
-Offensive security write-ups and field notes by [Luis Rojas](https://www.linkedin.com/in/lrjsec).
+OT security lab notes and write-ups by [Luis Rojas](https://www.linkedin.com/in/lrjsec).
 
 Live site: [nullvoidlabs.io](https://www.nullvoidlabs.io)
 
 ## What's here
 
-Write-ups covering penetration testing, CTF boxes, malware analysis, and authorized security assessments. All testing is done on authorized platforms, in my own lab, or with written permission.
+Notes from building toward OT security engineering: an ICS testbench, plus write-ups of lab boxes, malware analysis, and authorized security assessments. All testing is done on authorized platforms, in my own lab, or with written permission.
 
 ## How the site is built
 

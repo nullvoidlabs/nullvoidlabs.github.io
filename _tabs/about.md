@@ -1,28 +1,34 @@
 ---
 layout: page
 title: About
-lede: Luis Rojas. Junior penetration tester in San Francisco, working toward ICS/SCADA red teaming.
+lede: Luis Rojas. Working toward OT security engineering in San Francisco.
 order: 4
 ---
 
 <div class="about">
 <div class="prose" markdown="1">
 
-## What I do
+## What I'm working toward
 
-I'm a junior penetration tester. That's the role I'm going after right now, and this site is the evidence. During the day I intern on a security team, where I run GRC platform assessments, pentest self-hosted tools, and deploy them on AWS. Everything else happens in labs that I document here.
+OT security engineering: protecting the industrial systems that run water, power, and manufacturing. I bring an attacker's mindset, which I built through the offensive write-ups on this site, but the goal is defensive engineering. Start from the worst physical outcome, ask whether an attacker could cause it, then design it out, including with controls that aren't digital at all.
 
-I hold Security+ and eJPT. Next up is RHCSA, then CCNA and OSCP. Long term I want to red team industrial control systems, and solid fundamentals across Linux, networking, and Active Directory are what make that specialization worth anything.
+## How I'm getting there
+
+Through infrastructure first. Segmentation is where OT defense lives, so I'm building Linux and networking depth (RHCSA, then CCNA) and looking for an infrastructure or network role to put it to work. In parallel I'm learning the physical side: PLC basics with OpenPLC, how control loops behave and fail, and a testbench I can actually break.
+
+I hold Security+ and eJPT. During the day I intern on a security team, where I'm building a guard server that sits between an AI agent and a GRC platform. It enforces read-only tools, requires human approval for deletes, and keeps a tamper-evident audit log.
+
+**Open to:** junior infrastructure, network, or sysadmin roles in the Bay Area or remote.
+
+## The testbench
+
+An ESP32 acts as the PLC. It speaks Modbus TCP and drives a pump and level sensor on a small water tank, with a web HMI on top. Next comes a safety interlock. Then I attack it on the bench, engineer the attack out, and write up both halves.
 
 ## How I write things up
 
-One rule: no new box until the last one is published. Each write-up records the whole chain, including the dead ends, the reasoning behind each pivot, and the exact commands. Someone following along should be able to reproduce it, not just see that it was done.
+One rule: nothing new until the last thing is published. Each write-up records the whole chain, including the dead ends, the reasoning behind each pivot, and the exact commands, so someone can reproduce it.
 
-All testing here happens on authorized platforms (Hack The Box, TryHackMe), in my own lab, or with written permission from the owner.
-
-## The lab
-
-A VLAN-segmented Proxmox cluster runs my Active Directory and offensive labs. For the ICS side, I'm building a small Modbus water-tank testbench on ESP32 hardware, so I can practise against real field protocols instead of only reading about them.
+All testing here happens on authorized platforms (Hack The Box, TryHackMe), in my own lab, or with written permission from the owner. The lab is a VLAN-segmented Proxmox cluster running Active Directory and offensive labs.
 
 </div>
 
@@ -31,11 +37,11 @@ A VLAN-segmented Proxmox cluster runs my Active Directory and offensive labs. Fo
 <h2 id="road-title">Roadmap</h2>
 <div class="faceplate-body">
 <ol class="roadmap">
-  <li data-state="done"><div><strong>eJPT + Security+</strong><span>Foundation certs. <em>Done</em></span></div></li>
+  <li data-state="done"><div><strong>eJPT + Security+</strong><span>Foundations. <em>Done</em></span></div></li>
   <li data-state="active"><div><strong>RHCSA</strong><span>Exam target Dec 2026 – Jan 2027. <em>In progress</em></span></div></li>
-  <li><div><strong>CCNA</strong><span>Networking depth.</span></div></li>
-  <li><div><strong>OSCP</strong><span>Active Directory attack chains.</span></div></li>
-  <li><div><strong>GICSP</strong><span>ICS/OT specialization on top of red team fundamentals.</span></div></li>
+  <li><div><strong>CCNA</strong><span>2027. Networking and segmentation.</span></div></li>
+  <li><div><strong>IEC 62443 and CCE</strong><span>2028. Industrial security standards and consequence-driven engineering.</span></div></li>
+  <li><div><strong>GICSP</strong><span>ICS security engineering.</span></div></li>
 </ol>
 </div>
 </section>
@@ -52,7 +58,7 @@ A VLAN-segmented Proxmox cluster runs my Active Directory and offensive labs. Fo
 <h2 id="kit-title">Toolkit</h2>
 <div class="faceplate-body">
 <ul class="kit">
-  <li>Kali</li><li>Fedora</li><li>Burp Suite</li><li>Caido</li><li>Nmap</li><li>RustScan</li><li>NetExec</li><li>Impacket</li><li>Metasploit</li><li>Hashcat</li><li>Wireshark</li><li>Python</li><li>Bash</li><li>Proxmox</li><li>Active Directory</li>
+  <li>Linux (Fedora, RHEL)</li><li>Proxmox</li><li>VLAN segmentation</li><li>Modbus TCP</li><li>ESP32</li><li>Wireshark</li><li>Nmap</li><li>Python</li><li>Bash</li><li>Active Directory</li><li>Burp Suite</li><li>Impacket</li>
 </ul>
 </div>
 </section>

@@ -6,9 +6,13 @@ rows:
     note: Exam target Dec 2026 – Jan 2027
   - label: Building
     value: A Modbus water-tank testbench on ESP32
-    note: Small ICS lab for practising against real field protocols
+    note: Next, a safety interlock to attack and then engineer the attack out
   - label: Interning
-    value: GRC platform evaluation and pentesting
-    note: Self-hosted tools, AWS deployment
+    value: A guard server between an AI agent and a GRC platform
+    note: Read-only tools, human-approved deletes, tamper-evident audit log
+  - label: Learning
+    value: PLC basics and control loops
+    note: Ladder logic with OpenPLC, how PID loops behave and fail
   - label: Next
-    value: CCNA, then OSCP
+    value: CCNA in 2027
+    note: Networking and segmentation, where OT defense starts

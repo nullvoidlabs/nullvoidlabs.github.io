@@ -3,11 +3,11 @@
 # No remote theme: everything that renders the site lives in this repo.
 
 title: NullVoidLabs
-tagline: Offensive security write-ups and field notes
+tagline: OT security lab notes and write-ups
 description: >-
-  Offensive security write-ups by Luis Rojas: Hack The Box and TryHackMe
-  attack chains, malware analysis reports, and security assessments,
-  documented end to end.
+  Luis Rojas, working toward OT security engineering. Lab notes from an
+  ESP32 Modbus testbench, plus attack-chain write-ups, malware analysis,
+  and security assessments, documented end to end.
 
 url: "https://www.nullvoidlabs.io"
 baseurl: ""

@@ -149,7 +149,8 @@ main { flex: 1 0 auto; }
 @media (min-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 4rem; } }
 .hero-title {
   margin: 0 0 1.5rem;
-  font: 700 clamp(3.2rem, 9vw, 6.75rem)/.9 var(--display);
+  font: 700 clamp(2.6rem, 6.4vw, 5.4rem)/.92 var(--display);
+  text-wrap: balance;
   letter-spacing: -.012em;
 }
 .hero-title span { display: block; }
